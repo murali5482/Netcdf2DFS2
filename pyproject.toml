@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dfs2-converter"
+version = "0.1.0"
+description = "Convert NetCDF wind data to DHI MIKE 21 DFS2 files."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mikeio",
+    "xarray",
+    "pandas",
+    "numpy",
+    "netcdf4",
+]
+
+[project.scripts]
+convert-nc-to-dfs2 = "dfs2_converter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dfs2_converter*"]

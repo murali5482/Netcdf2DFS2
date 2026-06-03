@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+dfs2_converter/__init__.py
+dfs2_converter/cli.py
+dfs2_converter/converter.py
+dfs2_converter.egg-info/PKG-INFO
+dfs2_converter.egg-info/SOURCES.txt
+dfs2_converter.egg-info/dependency_links.txt
+dfs2_converter.egg-info/entry_points.txt
+dfs2_converter.egg-info/requires.txt
+dfs2_converter.egg-info/top_level.txt

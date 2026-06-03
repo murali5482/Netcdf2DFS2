@@ -1,0 +1,2 @@
+[console_scripts]
+convert-nc-to-dfs2 = dfs2_converter.cli:main
