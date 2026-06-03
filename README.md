@@ -1,40 +1,30 @@
-# DFS2 Converter
+# Netcdf2DFS2
 
-A small Python package to convert NetCDF wind fields (`u10`, `v10`) into DHI MIKE 21 `dfs2` files.
+Lightweight converter to generate DHI MIKE 21 `dfs2` files from NetCDF U/V wind fields.
 
-## Install
+Key points:
+- Converts paired U/V variables (default `u10`/`v10`) into a `dfs2` time series using `mikeio`.
+- Interactive prompts let you choose the input `.nc`, output folder, and output filename.
+- Large raw/data files were intentionally removed from this repository; use Git LFS if you need to store binaries.
 
-```bash
+Quick start:
+
+Install in editable mode:
+
+```powershell
 python -m pip install -e .
 ```
 
-## Usage
-
 Run interactively:
 
-```bash
-python convert_nc_to_dfs2.py
+```powershell
+convert-nc-to-dfs2 --ask
 ```
 
-Or with arguments:
+Or run non-interactively:
 
-```bash
-python convert_nc_to_dfs2.py --infile ERA5_wind_UV_2024.nc --outfile output/ERA5_wind_UV_2024.dfs2
+```powershell
+convert-nc-to-dfs2 --infile path\to\file.nc --outfile path\to\out.dfs2
 ```
 
-The script will ask for:
-- input NetCDF file
-- output folder
-- output file name
-
-## Package CLI
-
-After install, use:
-
-```bash
-convert-nc-to-dfs2
-```
-
-## Notes
-
-If no output filename is provided, the converter defaults to the input basename with `.dfs2`.
+If you need to keep large datasets with this project, enable Git LFS and track the appropriate extensions (`.nc`, `.dfs2`, etc.).
